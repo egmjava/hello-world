@@ -7,18 +7,18 @@ import { IFCLoader } from "web-ifc-three/IFCLoader";
 
 //mapboxgl.accessToken = 'YOUR_API_KEY'
 //this API key is restricted to this github repo. Make a free account to get your own: https://account.mapbox.com/auth/signup/
-mapboxgl.accessToken = 'pk.eyJ1IjoiaWZjbWFwYm94IiwiYSI6ImNsNDBlbW52dTBjNHMzY3F0djJkM3lyb3kifQ.oZ2hjiBIxjhNC3UnqIK8dg';
+mapboxgl.accessToken = 'pk.eyJ1IjoiZWdtamF2YSIsImEiOiJjbDhqcjJ2NXkwNGtrM29ueGtkYjJ1b3hoIn0.FN5O9T0EfQ25t2jCS0QZNQ';
 const map = new mapboxgl.Map({
   container: 'map',
   style: 'mapbox://styles/mapbox/light-v10',
-  zoom: 20.5,
-  center: [13.4453, 52.4910],
+  zoom: 10.5,
+  center: [10.4722595, -66.8896525],
   pitch: 75,
   bearing: -80,
   antialias: true
 });
 
-const modelOrigin = [13.4453, 52.4910];
+const modelOrigin = [10.4722595, -66.8896525];
 const modelAltitude = 0;
 const modelRotate = [Math.PI / 2, .72, 0];
  
@@ -98,5 +98,6 @@ const customLayer = {
 };
  
 map.on('style.load', () => {
-  map.addLayer(customLayer, 'waterway-label');
+ map.addLayer(customLayer, 'waterway-label');
+
 });
